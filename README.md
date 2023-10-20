@@ -73,4 +73,20 @@ Setiap #EXTINF menandakan durasi segmen video dalam detik dan mengacu pada segme
 Anda harus menyesuaikan file daftar putar .m3u8 sesuai dengan segmen-segmen video yang Anda miliki. Ini adalah contoh sederhana, dan dalam situasi nyata, ini akan mengacu pada segmen-segmen video yang Anda hasilkan saat mengkode video ke format HLS.
 
 Pastikan bahwa file daftar putar dan segmen-segmen .ts berada di lokasi yang dapat diakses oleh pemutar video dan mematuhi struktur protokol HLS yang benar.
+
+CARA MEMBUAT MASTER M3U8
+------------------------------
+
+buat file master.m3u8 (ex. napo.m3u8)
+
+lalu isikan dengan :
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=800000,RESOLUTION=854x480,CODECS="avc1.4d401f,mp4a.40.2"
+480p.m3u8 ---- ubah dengan path menuju file .m3u8 (ex. https://asdh.com/240p/240p.m3u8)
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1500000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2"
+720p.m3u8
+#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=400000,RESOLUTION=426x240,CODECS="avc1.4d401f,mp4a.40.2"
+240p.m3u8
+
    
