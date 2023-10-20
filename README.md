@@ -62,11 +62,17 @@ Contoh M3U8 File
 Penjelasan:
 
 #EXTM3U: Menandakan bahwa ini adalah file daftar putar M3U8.
+
 #EXT-X-VERSION:3: Versi protokol HLS yang digunakan.
+
 #EXT-X-TARGETDURATION:10: Durasi maksimum dari setiap segmen video.
+
 #EXT-X-MEDIA-SEQUENCE:0: Urutan media awal.
+
 #EXT-X-PLAYLIST-TYPE:VOD: Jenis daftar putar, dalam hal ini "Video on Demand".
+
 #EXTINF:10.0,: Durasi dan nama segmen berikutnya.
+
 video-segment-0.ts, video-segment-1.ts, dan seterusnya: Nama segmen-segmen video.
 Setiap #EXTINF menandakan durasi segmen video dalam detik dan mengacu pada segmen .ts yang harus diputar selama durasi tersebut.
 
@@ -80,13 +86,21 @@ CARA MEMBUAT MASTER M3U8
 buat file master.m3u8 (ex. napo.m3u8)
 
 lalu isikan dengan :
+
 #EXTM3U
+
 #EXT-X-VERSION:3
+
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=800000,RESOLUTION=854x480,CODECS="avc1.4d401f,mp4a.40.2"
+
 480p.m3u8 ---- ubah dengan path menuju file .m3u8 (ex. https://asdh.com/240p/240p.m3u8)
+
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1500000,RESOLUTION=1280x720,CODECS="avc1.4d401f,mp4a.40.2"
+
 720p.m3u8
+
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=400000,RESOLUTION=426x240,CODECS="avc1.4d401f,mp4a.40.2"
+
 240p.m3u8
 
    
